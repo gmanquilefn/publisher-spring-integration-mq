@@ -1,0 +1,30 @@
+para el primer inicio del contenedor, debemos cambiar la configuración del servidor jetty, ya que, por defecto, no funciona en localhost/127.0.0.1
+
+1) para acceder a esta config, debemos acceder al contenedor por: 
+	docker exec -it <contenedor> sh
+o
+	Docker desktop -> contenedor -> view all files
+
+2) luego, ir a la carpeta opt/conf
+3) dentro de la capeta buscaremos el archivo jetty.xml
+4) cambiaremos la bean xml llamado jettyPort
+	
+	<bean id="jettyPort" class="org.apache.activemq.web.WebConsolePort" init-method="start">
+             <!-- the default port number for the web console -->
+        	<property name="host" value="127.0.0.1"/>
+        	<property name="port" value="8161"/>
+    	</bean>
+
+5) cambiaremos el host a 0.0.0.0
+	
+	<bean id="jettyPort" class="org.apache.activemq.web.WebConsolePort" init-method="start">
+             <!-- the default port number for the web console -->
+        	<property name="host" value="0.0.0.0"/>
+        	<property name="port" value="8161"/>
+    	</bean>
+
+6) reiniciar contenedor
+7) probar acceder a localhost:8161 o 127.0.0.1:8161
+8) ahora deberia pedir auth basic para acceder a la consola si se llega a este paso, estamos Ok
+9) acceder a la consola con admin/admin
+10) listo
