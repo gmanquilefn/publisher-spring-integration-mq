@@ -3,7 +3,7 @@ server:
 
 spring:
     application:
-        name: ActiveMQ-Publisher
+        name: ActiveMQ-Pub-Sub
 
     activemq:
         broker-url: tcp://127.0.0.1:61616

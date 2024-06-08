@@ -1,6 +1,5 @@
-package cl.gfmn.publisher.controller;
+package cl.gfmn.publisher;
 
-import cl.gfmn.publisher.service.PublisherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

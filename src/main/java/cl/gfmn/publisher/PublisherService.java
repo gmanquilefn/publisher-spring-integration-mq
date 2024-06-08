@@ -1,4 +1,4 @@
-package cl.gfmn.publisher.service;
+package cl.gfmn.publisher;
 
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
