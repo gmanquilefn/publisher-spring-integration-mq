@@ -2,7 +2,7 @@ version: '3'
 
 services:
   activemq:
-    image: activemq:5.16.6
+    image: active-mq-classic:5.16.6
     ports:
       - "0.0.0.0:61616:61616"
       - "0.0.0.0:8161:8161"
